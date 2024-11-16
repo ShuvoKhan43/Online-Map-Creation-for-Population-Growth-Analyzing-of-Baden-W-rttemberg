@@ -1,4 +1,4 @@
-Project Title: Online Map Creation for Population Growth Analysis
+Project Title: Online Map Creation for Population Growth Analysis of Baden-Württemberg
 
 Description:
 This project, developed during my master's GIS Studio course, aims to analyze population growth using a dashboard interface. Leveraging open data from the Landesamt Baden-Württemberg, the project visualizes population distribution and trends through interactive maps and insightful graphs. Built with Flask, MapLibre, HTML, CSS, and JavaScript, the application provides an engaging and user-friendly way to explore demographic changes over time.
