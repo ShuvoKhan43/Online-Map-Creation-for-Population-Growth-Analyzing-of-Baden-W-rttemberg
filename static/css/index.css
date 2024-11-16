@@ -1,0 +1,159 @@
+/* static/css/styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+#map {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #eaeaea; /* Placeholder for the map */
+    z-index: 1;
+    top: 0;
+}
+
+.control-container {
+    position: absolute;
+    color: #fff;
+    top: 30px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+    width: 13rem;
+}
+
+#populationBtn, #simulationBtn {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #b71540;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+#populationBtn.active, #simulationBtn.active {
+    background-color: #eb2f06;
+    font-weight: 600;
+    opacity: 1;
+}
+
+#submitBtn {
+    display: block;
+    width: 100%;
+    margin: 10px 0 0 0;
+    padding: 10px;
+    background-color: #eaeaea;
+    color: #000;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+#submitBtn:hover {
+    background-color: #78e08f;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+}
+
+.options label {
+    margin-bottom: 7px;
+    font-size: 13px;
+}
+
+.hidden {
+    display: none;
+}
+
+#chartContainer {
+    position: absolute;
+    width: 500px;
+    height: 250px;
+    left: 10px;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure chart is on top */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#closeChartBtn {
+    background-color: #ff4b5c;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.8em;
+}
+.credit {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: fixed;
+    z-index: 99999;
+    background: url(./Images/hft.jpg) no-repeat;
+    background-size: 100px;
+    bottom: 40px;
+    right: 10px;
+    box-shadow: 0 0 10px 1px #000;
+}
+
+.titleDiv {
+    position: absolute;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    backdrop-filter: blur(5px);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+h1 {
+    text-align: left;
+    margin: 10px; 
+    padding: 0; 
+    font-size: 34px; 
+    line-height: 1; 
+    color: #000; 
+    z-index: 2; 
+    position: relative;
+  
+}
+h2 {
+    text-align: left;
+    margin: 10px ; 
+    padding: 0; 
+    font-size: 20px; 
+    line-height: 1; 
+    background-color: none; 
+    color: #000; 
+    z-index: 2; 
+    position: relative;
+}
+

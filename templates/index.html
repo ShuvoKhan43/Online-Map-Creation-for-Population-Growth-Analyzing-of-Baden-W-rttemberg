@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Population Data Portal</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+
+    <!-- Maplibre GL -->
+    <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel='stylesheet' />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Logo</title>
+</head>
+
+<body>
+    <div class="titleDiv">
+        <h1>Online Map for Analyzing Population Growth of Baden-Württemberg</h1>
+        <h2>Prepared by: Md. Raisul Islam, Md Ashifur Rahaman & Fatemeh Rafiei</h2>
+    </div>
+    <ul>
+        {% for row in data %}
+        <li>{{ row }}</li>
+        {% endfor %}
+    </ul>
+    <div id="map"></div>
+    <div class="credit"></div>
+
+    <div class="control-container">
+        <button id="populationBtn" class="active">Population</button>
+        <button id="simulationBtn">Simulation</button>
+        <div id="populationOptions" class="options">
+            <label><input type="radio" name="population" id="espop" value="espop"> Esslingen Pop</label>
+            <label><input type="radio" name="population" id="karlpop" value="karlpop"> Karlsruhe Pop</label>
+            <label><input type="radio" name="population" id="ludpop" value="ludpop"> Ludwigsburg Pop</label>
+        </div>
+        <div id="simulationOptions" class="options hidden">
+            <label><input type="radio" name="simulation" id="essim" value="espop"> Esslingen Sim</label>
+            <label><input type="radio" name="simulation" id="karlsim" value="karlpop"> Karlsruhe Sim</label>
+            <label><input type="radio" name="simulation" id="ludsim" value="ludpop"> Ludwigsburg Sim</label>
+        </div>
+        <button id="submitBtn">Submit</button>
+    </div>
+
+    <div id="chartContainer" class="hidden">
+        <button id="closeChartBtn">Close</button>
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+    <a href="https://www.hft-stuttgart.de/" target='_blank'>
+        <div class="credit"></div>
+        </a>
+
+</body>
+
+</html>
